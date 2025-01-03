@@ -1,4 +1,4 @@
-﻿<?php include_once "api/db.php";?>
+﻿﻿<?php include_once "api/db.php";?>
 <!DOCTYPE html
 	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <!-- saved from url=(0039) -->
@@ -49,9 +49,11 @@
 						<?php if(!isset($_SESSION['user'])):?>
 							<a href="index.php?do=login">會員登入</a>
 						<?php else:?>
-							歡迎,<?=$_SESSION['user'];?><br>
-							<button onclick="location.href='admin.php'">管理</button>|
-							<button onclick="logout()">登出</button>
+							歡迎,<?=$_SESSION['user'];?>
+							<?php if($_SESSION['user']=='admin'):?>
+								<br><button onclick="location.href='admin.php'">管理</button>|
+							<?php endif;?>
+								<button onclick="logout()">登出</button>
 						<?php endif;?>
 					</span>
 				</div>
