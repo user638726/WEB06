@@ -30,6 +30,7 @@
                 <span class='detail'><?=nl2br($row['news']);?></span>
             </td>
             <td>
+                
                 <?php 
                 if(isset($_SESSION['user'])){
                     $chk=$Log->count(['news'=>$row['id'],'user'=>$_SESSION['user']]);
