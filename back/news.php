@@ -1,6 +1,7 @@
 <fieldset style='width:85%;margin:auto'>
     <legend>最新文章管理</legend>
-    <!-- table.ct>(tr>th*4)+(tr>td*4) -->
+
+    <button onclick='location.href=&#39;back/addnews.php&#39;'>新增文章</button><!-- table.ct>(tr>th*4)+(tr>td*4) -->
     <table class="ct" style="width:100%">
         <tr>
             <th>編號</th>
@@ -28,8 +29,8 @@
                 <input type="checkbox" name="del[]" value="<?=$row['id'];?>">
             </td>
         </tr>
-                <input type="hidden" name="id[]" value="<?=$row['id'];?>">
-    <?php   endforeach;  ?>
+        <input type="hidden" name="id[]" value="<?=$row['id'];?>">
+        <?php   endforeach;  ?>
     </table>
     <div class="ct">
         <?php 
@@ -58,24 +59,26 @@
 </fieldset>
 
 <script>
-function edit(){
+function edit() {
     /* let ids=$("input[name='id[]']")
              .map((idx,item)=>{
                 return $(item).val()
               }).get(); */
-    let ids=$("input[name='id[]']")
-             .map((idx,item)=>$(item).val()).get();
-    let del=$("input[name='del[]']:checked")
-             .map((idx,item)=>$(item).val()).get();
-    let sh=$("input[name='sh[]']:checked")
-             .map((idx,item)=>$(item).val()).get();
+    let ids = $("input[name='id[]']")
+        .map((idx, item) => $(item).val()).get();
+    let del = $("input[name='del[]']:checked")
+        .map((idx, item) => $(item).val()).get();
+    let sh = $("input[name='sh[]']:checked")
+        .map((idx, item) => $(item).val()).get();
 
-  $.post("./api/edit_news.php",{ids,sh,del},(res)=>{
-    //console.log(res);
-    location.reload();
-  })
-                 
+    $.post("./api/edit_news.php", {
+        ids,
+        sh,
+        del
+    }, (res) => {
+        //console.log(res);
+        location.reload();
+    })
+
 }
-
-
 </script>
