@@ -60,10 +60,9 @@
 
 <script>
 function edit() {
-    /* let ids=$("input[name='id[]']")
-             .map((idx,item)=>{
-                return $(item).val()
-              }).get(); */
+    /* let ids=$("input[name=' id[]']") .map((idx,item)=>{
+        return $(item).val()
+        }).get(); */
     let ids = $("input[name='id[]']")
         .map((idx, item) => $(item).val()).get();
     let del = $("input[name='del[]']:checked")
