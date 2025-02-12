@@ -1,7 +1,7 @@
 <fieldset style='width:85%;margin:auto'>
     <legend>最新文章管理</legend>
 
-    <button onclick='location.href=&#39;back/addnews.php&#39;'>新增文章</button><!-- table.ct>(tr>th*4)+(tr>td*4) -->
+    <a class="blo" href="?do=addnews"><button>新增文章</button></a><!-- table.ct>(tr>th*4)+(tr>td*4) -->
     <table class="ct" style="width:100%">
         <tr>
             <th>編號</th>
