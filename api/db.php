@@ -72,7 +72,6 @@ class DB{
             $sql="INSERT INTO $this->table (`".join("`,`",$cols)."`) VALUES('".join("','",$array)."')";
         }
         
-        //echo $sql;
         return $this->pdo->exec($sql);
     }
     

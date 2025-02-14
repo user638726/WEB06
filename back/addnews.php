@@ -19,11 +19,13 @@
             </tr>
             <tr>
                 <td>文章內容</td>
-                <td><textarea name="text" id="text" style="width:300px;height:300px;"></textarea></td>
+                <td><textarea name="text" id="text" name="text" style="width:300px;height:300px;"></textarea></td>
 
             </tr>
             <tr>
-                <td><input type="submit" value="新增"><input type="reset" value="重置"></td>
+                <div class="ct">
+                    <td><input type="submit" value="新增"><input type="reset" value="重置"></td>
+                </div>
             </tr>
         </table>
     </form>
