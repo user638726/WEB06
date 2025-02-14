@@ -19,7 +19,7 @@
             </tr>
             <tr>
                 <td>文章內容</td>
-                <td><textarea name="text" id="text" name="text" style="width:300px;height:300px;"></textarea></td>
+                <td><textarea name="text" id="text" style="width:300px;height:300px;"></textarea></td>
 
             </tr>
             <tr>
