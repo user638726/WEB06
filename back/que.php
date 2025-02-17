@@ -80,8 +80,8 @@ $(".show").on("click", function() {
     let id = $(this).data('id');
     $.post("./api/show.php", {
         id
-    }, () => {
-        location.reload();
+    }, (res) => {
+        console.log(res);
     })
 })
 </script>
