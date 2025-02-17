@@ -66,7 +66,7 @@ function resetForm() {
             <td><?=$key+1;?>.</td>
             <td width="60%"><?=$row['text'];?></td>
             <td class='ct'><?=$row['vote'];?></td>
-            <td><button>開放</button><button>關閉</button></td>
+            <td><button class="show" data-id="<?=$row['main_id'];?>"><?=($row['main_id']==1)?'隱藏':'顯示';?></button></td>
             <td class='ct'></td>
         </tr>
         <?php 
@@ -75,3 +75,13 @@ function resetForm() {
     </table>
 
 </fieldset>
+<script>
+$(".show").on("click", function() {
+    let id = $(this).data('id');
+    $.post("./api/show.php", {
+        id
+    }, () => {
+        location.reload();
+    })
+})
+</script>
