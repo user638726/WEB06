@@ -10,7 +10,7 @@
             <th>狀態</th>
         </tr>
         <?php 
-        $rows=$Que->all(['main_id'=>0]);
+        $rows=$Que->all(['sh'=>0]);
         foreach($rows as $key => $row):
 
         ?>

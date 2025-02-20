@@ -49,7 +49,7 @@
                         <?php else:?>
                         歡迎,<?=$_SESSION['user'];?>
                         <?php if($_SESSION['user']=='admin'):?>
-                        <br><button onclick=' &#39;admin.php&#39;'>管理</button>|
+                        <br><button onclick='location.href=&#39;admin.php&#39;'>管理</button>|
                         <?php endif;?>
                         <button onclick='location.href=&#39;api/logout.php&#39;'>登出</button>
                         <?php endif;?>
