@@ -66,7 +66,7 @@ function resetForm() {
             <td><?=$key+1;?>.</td>
             <td width="60%"><?=$row['text'];?></td>
             <td class='ct'><?=$row['vote'];?></td>
-            <td><button class="show" data-id="<?=$row['id'];?>"><?=($row['sh']==1)?'隱藏':'顯示';?></button></td>
+            <td><button class="show" data-id="<?=$row['id'];?>"><?=($row['sh']==1)?'關閉':'開放';?></button></td>
             <td class='ct'></td>
         </tr>
         <?php 
